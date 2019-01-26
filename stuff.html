@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+
+<script>
+var data = {
+"1": "11,0",
+"2": "12,0",
+"3": "3,1",
+"4": "4,1",
+"5": "15,0",
+"6": "16,0",
+"7": "17,0",
+"8": "8,1",
+"9": "19,0",
+"10": "10,1",
+"nam": "Eric"
+};
+
+var score = 0;
+
+//looping over the object
+for (var key in data){
+    //make sure we're not dealing with the nam pairs and only the answer pairs
+    if (key != "nam"){
+        //we're grabbing the values like "4,1"
+            //we're turning it into ["4", "1"]
+                //we're grabbing the second element in the arr
+                    //by doing [1]
+                        //then we're checking if it's true or not by comparing it to "1" which is true in MySQL
+                            //then we add one to score 
+        if (data[key].split(',')[1] == "1"){
+            score++
+        }
+    }
+}
+console.log(score);
+</script>
+    
+</body>
+</html>

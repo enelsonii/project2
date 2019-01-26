@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Spongebob Trivia</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+</head>
+
+<body class="container">
+	<main>
+		<table>
+			<tr>
+				<th>id</th><th>Name</th><th>Score</th>
+			</tr>
+
+			<% for (var i = 0; i < data.length; i++) { %>
+				<tr>
+					<td><%= data[i].id %></td>
+					<td><%= data[i].nam %></td>
+					<td><%= data[i].score %></td>
+				</tr>
+			<% } %>
+		</table>
+	</main>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+
+</body>
+
+</html>
